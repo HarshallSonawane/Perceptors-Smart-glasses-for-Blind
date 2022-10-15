@@ -1,6 +1,6 @@
 #!/usr/bin/python
 import RPi.GPIO as GPIO
-import time
+from time import sleep
 
 
 def buzz():
@@ -20,7 +20,6 @@ while True:
     GPIO.output(buzzer, GPIO.LOW)
     print("No Beep")
     sleep(0.5)
-
 
 
 try:
@@ -65,5 +64,3 @@ finally:
 # Libraries
 
 # Disable warnings (optional)
-
-
