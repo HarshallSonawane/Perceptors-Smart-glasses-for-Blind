@@ -38,17 +38,20 @@ while True:
         pulse_duration = pulse_end_time - pulse_start_time
         distance = round(pulse_duration * 17150, 2)
         print("Distance:", distance, "cm")
-        if distance > 200:
+        if distance < 100:
             GPIO.setwarnings(False)
             buzzer = 16
             GPIO.setup(buzzer, GPIO.OUT)
+            i = 5
 
-            GPIO.output(buzzer, GPIO.HIGH)
-            print("Beep")
-            sleep(0.5)  # Delay in seconds
-            GPIO.output(buzzer, GPIO.LOW)
-            print("No Beep")
-            sleep(0.5)
+            while i >= 0:
+                GPIO.output(buzzer, GPIO.HIGH)
+                print("Beep")
+                sleep(1)  # Delay in seconds
+                GPIO.output(buzzer, GPIO.LOW)
+                print("No Beep")
+                sleep(1)
+                i = i-1
 
     finally:
         GPIO.cleanup()
