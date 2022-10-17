@@ -47,10 +47,10 @@ while True:
             while i >= 0:
                 GPIO.output(buzzer, GPIO.HIGH)
                 print("Beep")
-                sleep(1)  # Delay in seconds
+                sleep(0.25)  # Delay in seconds
                 GPIO.output(buzzer, GPIO.LOW)
                 print("No Beep")
-                sleep(1)
+                sleep(0.25)  # sleep
                 i = i-1
 
     finally:
