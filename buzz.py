@@ -54,7 +54,7 @@ while True:
                 i = i-1
 
     finally:
-        GPIO.cleanup()  # cleaning process
+        GPIO.cleanup()  # cleaning
 
 
 # Libraries
