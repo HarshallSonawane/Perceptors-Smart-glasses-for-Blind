@@ -51,7 +51,7 @@ while True:
                 GPIO.output(buzzer, GPIO.LOW)
                 print("No Beep")
                 sleep(0.25)  # sleeep
-                i = i-1
+                i = i-1  # counter
 
     finally:
         GPIO.cleanup()  # cleaning
