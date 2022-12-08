@@ -206,6 +206,7 @@ while True:
     frame_rate_calc = 1/time1
     os.system("espeak 'Approaching Object is " + label + " ' ")
     time.sleep(3)
+    os.system("python3 buzz.py")
     #os.system("espeak ' " +label+ " ' ")
 
     if cv2.waitKey(1) == ord('q'):
